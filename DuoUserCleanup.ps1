@@ -75,7 +75,7 @@ foreach($item in $adDuoGroup){
                     $lineout | Out-File -FilePath $outputpath -Append
                 }
                 
-                #Get Duo Last Login value
+                #Get Duo last_login value
                 $duoLoginAttribute = $null
                 $duoLoginAttribute = $duoUsers | Select-Object -Property username,last_login | Where-Object{$_.username -contains $memberList.SamAccountName}
 
@@ -91,7 +91,7 @@ foreach($item in $adDuoGroup){
                         $lineout | Out-File -FilePath $outputpath -Append
                     }
                 }
-                #Compare the AD value to Duo Last Login and remove from group
+                #Compare the AD value to Duo last_login and remove from group
                 Else{
                     $temptimeLastLogin = [TimeZone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($duoLoginAttribute.last_login))
                     $timespan = New-TimeSpan -Start $temptimestamp -End $temptimeLastLogin
@@ -110,7 +110,7 @@ foreach($item in $adDuoGroup){
                         $lineout | Out-File -FilePath $outputpath -Append
                     }
                 }
-                #Build list of user in AD
+                #Build list of users in AD
                 $adUsers += $memberList
             }
         }
@@ -123,7 +123,7 @@ foreach($item in $adDuoGroup){
     }
 }
 
-###Compare Duo users to AD users and produce a list if any are not in AD group.
+###Compare $duoUsers to $adUsers and produce a list of any not in AD.
 ###These users were created in Duo and not created by AD sync and will need to be managed manually.
 ###Output $duoCreatedUsers to file if needed.
 #ForEach($dUser in $duoUsers){
