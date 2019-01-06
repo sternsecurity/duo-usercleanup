@@ -20,7 +20,7 @@ If users are going to continue using the applications from a trusted network the
 The last_login value in the Duo API is for any login, remote using 2FA or from a trusted network.  This should be taken into account when managing remote access, user login activity should still be monitored.  If a user has 2FA access and only logs in from trusted networks, this script will not remove them.
 
 ## Modify Variables for your environment
-### Set the -Filter value to the Duo AD group name and set the -SearchBase Value to the UO AD Path
+### Set the -Filter value to the Duo AD group name and set the -SearchBase Value to the OU AD Path
 $adDuoGroup = Get-ADGroup -Filter {name -like "\<Duo group\>"} -SearchBase "<OU=Duo,OU=Groups,DC=example,DC=com>"
 
 ### Set this value to remove users after N of days
