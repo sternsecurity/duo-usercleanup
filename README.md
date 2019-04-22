@@ -1,3 +1,5 @@
+# THIS SCRIPT IS DEPRICATED- PLEASE USE V2
+
 # duo-usercleanup
 Developed by Peter Nelson
 Stern Security
