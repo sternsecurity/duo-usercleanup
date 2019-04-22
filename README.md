@@ -2,9 +2,7 @@
 https://github.com/sternsecurity/duo-usercleanup/blob/V2/README.md
 
 # duo-usercleanup
-Developed by Peter Nelson
-Stern Security
-www.sternsecurity.com
+Developed by Peter NelsonStern Securitywww.sternsecurity.com
 
 
 This powershell script requires the powershell module developed by Matt Began(mbegan).
