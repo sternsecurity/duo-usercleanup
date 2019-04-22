@@ -1,4 +1,5 @@
 # THIS SCRIPT IS DEPRICATED- PLEASE USE V2
+https://github.com/sternsecurity/duo-usercleanup/blob/V2/README.md
 
 # duo-usercleanup
 Developed by Peter Nelson
