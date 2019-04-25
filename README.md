@@ -1,6 +1,3 @@
-# THIS SCRIPT IS DEPRICATED- PLEASE USE V2
-https://github.com/sternsecurity/duo-usercleanup/blob/V2/README.md
-
 # duo-usercleanup
 Developed by Peter Nelson
 Stern Security
@@ -29,12 +26,6 @@ $adDuoGroup = Get-ADGroup -Filter {name -like "\<Duo group\>"} -SearchBase "<OU=
 
 ### Set this value to remove users after N of days
 $staleDate = '-90'
-
-### Set this AD attribute to record Duo last login
-$adUserAttribute1 = '\<Duo last login attrib\>'
-
-### Set this AD attribute to record when user was removed from the group
-$adUserAttribute2 = '\<Duo stale user attrib\>'
 
 ### This Value is used in many date time conversions, this is the current unix date/time with $staleDate
 $unixtime=[int][double]::Parse(((get-date -date (Get-Date).ToUniversalTime().AddDays($staleDate) -UFormat %s)))
