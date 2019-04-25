@@ -3,11 +3,10 @@ Developed by Peter Nelson<br>
 Stern Security<br>
 www.sternsecurity.com
 
+This script utilizes the Duo Admin API to remove users from an Active Directory group that have not logged in within a specified amount of time.  By default, Duo has no way of removing inactive users within Duo when "Directory Sync" is enabled.  This script allows you to remove users from the Duo group in Active Directory after a defined number of days of inactivity.
 
 This powershell script requires the powershell module developed by Matt Began(mbegan).<br>
 https://github.com/mbegan/Duo-PSModule
-
-This script utilizes the Duo Admin API to remove users from an Active Directory group that have not logged in within a specified amount of time.  By default, Duo has no way of removing inactive users within Duo when "Directory Sync" is enabled.  This script allows you to remove users from the Duo group in Active Directory after a defined number of days of inactivity.
 
 ## Considerations:
 This script needs to be run from a system and account with access to modify the "Duo" group in Active Directory.
