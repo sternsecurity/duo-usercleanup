@@ -1,10 +1,10 @@
 # duo-usercleanup
-Developed by Peter Nelson
-Stern Security
+Developed by Peter Nelson<br>
+Stern Security<br>
 www.sternsecurity.com
 
 
-This powershell script requires the powershell module developed by Matt Began(mbegan).
+This powershell script requires the powershell module developed by Matt Began(mbegan).<br>
 https://github.com/mbegan/Duo-PSModule
 
 Utilizes the Duo Admin API to remove users from Active Directory that have not logged in within a specified amount of time.  By default, Duo has no way of removing inactive users from the Duo group when "Directory Sync" is enabled.  This script allows you to remove users from the Duo group in Active Directory after a defined number of days of inactivity.
